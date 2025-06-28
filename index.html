@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+
+
+    <div class="brightness-overlay"></div>
+    
+    <div class="main">
+      <!-- Snap Preview Box -->
+      <div id="snap-preview"></div>
+
+      <!-- Desktop Icons -->
+      <section class="icons">
+        <div class="icon" id="icon-this-pc">
+          <img
+            src="https://img.icons8.com/fluency/48/monitor--v1.png"
+            alt="This PC"
+          />
+          <p>This PC</p>
+        </div>
+        <!-- <div class="icon" id="icon-control-panel">
+          <img
+            src="https://img.icons8.com/color/48/control-panel--v2.png"
+            alt="Control Panel"
+          />
+          <p>Control Panel</p>
+        </div> -->
+        <div class="icon" id="icon-recycle-bin">
+          <img
+            src="https://img.icons8.com/fluency/48/bin-windows.png"
+            alt="bin-windows"
+          />
+          <p>Recycle Bin</p>
+        </div>
+        <!-- <div class="icon" id="icon-internet">
+          <img
+            src="https://img.icons8.com/color/48/brave-web-browser.png"
+            alt="brave-web-browser"
+          />
+          <p>Internet</p>
+        </div> -->
+        <!-- <div class="icon" id="icon-projects">
+          <img
+            src="https://img.icons8.com/fluency/48/folder-invoices.png"
+            alt="Projects"
+          />
+          <p>Projects</p>
+        </div> -->
+        <div class="icon" id="icon-documents">
+          <img
+            src="https://img.icons8.com/color/48/document--v1.png"
+            alt="Documents"
+          />
+          <p>Documents</p>
+        </div>
+        <div class="icon" id="icon-pictures">
+          <img
+            src="https://img.icons8.com/color/48/image--v1.png"
+            alt="Pictures"
+          />
+          <p>Pictures</p>
+        </div>
+        <div class="icon" id="icon-music">
+          <img src="https://img.icons8.com/color/48/music.png" alt="Music" />
+          <p>Music</p>
+        </div>
+        <div class="icon" id="icon-videos">
+          <img
+            src="https://img.icons8.com/color/48/video-file.png"
+            alt="Videos"
+          />
+          <p>Videos</p>
+        </div>
+        <!-- <div class="icon" id="icon-downloads">
+          <img
+            src="https://img.icons8.com/color/48/downloads-folder.png"
+            alt="Downloads"
+          />
+          <p>Downloads</p>
+        </div> -->
+        <!-- <div class="icon" id="icon-vscode">
+          <img src="https://img.icons8.com/color/48/code.png" alt="VS Code" />
+          <p>VS Code</p>
+        </div> -->
+        <!-- <div class="icon" id="icon-photoshop">
+          <img
+            src="https://img.icons8.com/color/48/adobe-photoshop--v1.png"
+            alt="Photoshop"
+          />
+          <p>Photoshop</p>
+        </div> -->
+        <div class="icon" id="icon-google">
+          <img
+            src="https://img.icons8.com/fluency/48/google-logo.png"
+            alt="Google"
+          />
+          <p>Google</p>
+        </div>
+        <div class="icon" id="icon-instagram">
+          <img
+            src="https://img.icons8.com/fluency/48/instagram-new.png"
+            alt="Instagram"
+          />
+          <p>Instagram</p>
+        </div>
+        
+        <div class="icon" id="icon-github">
+          <img src="https://img.icons8.com/color/48/github.png" alt="GitHub" />
+          <p>GitHub</p>
+        </div>
+      </section>
+
+      <!-- Notification Panel -->
+      <section class="pannel">
+        <div class="functions">
+          <div class="btnpannel">
+            <div><i class="fa-solid fa-wifi"></i></div>
+            <p>Wi-Fi</p>
+          </div>
+          <div class="btnpannel">
+            <div><i class="fa-brands fa-bluetooth"></i></div>
+            <p>Bluetooth</p>
+          </div>
+          <div class="btnpannel">
+            <div><i class="fa-solid fa-plane-up"></i></div>
+            <p>Airplane</p>
+          </div>
+          <div class="btnpannel">
+            <div><i class="fa-solid fa-bolt"></i></div>
+            <p>Saver</p>
+          </div>
+          <div class="btnpannel">
+            <div><i class="fa-solid fa-moon"></i></div>
+            <p>Night</p>
+          </div>
+          <div class="btnpannel">
+            <div><i class="fa-solid fa-universal-access"></i></div>
+            <p>Access</p>
+          </div>
+        </div>
+        
+
+
+        <div class="slider-control">
+          <label for="brightness"><i class="fa-solid fa-sun" style="color: #ffffff;"></i></label>
+          <input type="range" id="brightnessSlider" min="0.1" max="1" step="0.1" value="1" />
+        </div>
+
+        <div class="slider-control">
+          <label for="volume">
+            <i class="fa-solid fa-volume-high" style="color: #ffffff;"></i>
+          </label>
+          <input type="range" id="volume" min="0" max="100" value="70" />
+        </div>
+        <div class="bottom">
+          <i class="fa-solid fa-battery-three-quarters" style="color: #ffffff;"></i>
+          <i class="fa-solid fa-gear" style="color: #ffffff;"></i>
+        </div>
+      </section>
+
+      <section class="context-menu">
+        <div class="menu">
+          <div class="menu-item" id="sort">
+            <img
+              width="9"
+              height="9"
+              src="https://img.icons8.com/material-rounded/24/sorting-arrows.png"
+              alt="sorting-arrows"
+            />
+            <p>Sort</p>
+          </div>
+
+          <div class="menu-item" id="refresh">
+            <img
+              width="9"
+              height="9"
+              src="https://img.icons8.com/ios-filled/50/restart--v1.png"
+              alt="restart--v1"
+            />
+            <p>Refresh</p>
+          </div>
+
+          <div class="menu-item" id="open-terminal">
+            <img
+              width="10"
+              height="10"
+              src="https://img.icons8.com/fluency/48/console.png"
+              alt="console"
+            />
+            <p>Open Terminal</p>
+          </div>
+
+          <div class="menu-item" id="new-folder">
+            <img
+              width="10"
+              height="10"
+              src="https://img.icons8.com/color/48/add-folder.png"
+              alt="add-folder"
+            />
+            <p>New Folder</p>
+          </div>
+
+          <div class="menu-item" id="personalize">
+            <img
+              width="10"
+              height="10"
+              src="https://img.icons8.com/isometric/50/monitor.png"
+              alt="monitor"
+            />
+            <p>Personalize</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="browserFunction">
+        <div class="header">
+          <div class="heading">
+            <h5>Browser</h5>
+          </div>
+
+          <div class="buttons">
+            <button type="button" class="minimize">
+              <!-- <i class="fa-solid fa-window-minimize"></i> -->
+              <i
+                class="fa-solid fa-minus fa-flip-vertical"
+                style="color: #ffffff"
+              ></i>
+            </button>
+
+            <button type="button" class="maximize">
+              <i class="fa-solid fa-window-maximize"></i>
+            </button>
+
+            <button type="button" class="close">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+        <div class="content">
+          <img
+            src="https://images.unsplash.com/photo-1678483790053-71367bc7a02c?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Google"
+          />
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search something..."
+          />
+
+          <button type="button" id="searchBtn">Search</button>
+        </div>
+
+        <div class="result" id="searchResult"></div>
+      </div>
+
+      <div class="this-pc-window">
+        <div class="this-pc-header">
+          <h3>This PC</h3>
+          
+          <div class="buttons">
+            <button type="button" class="minimize1">
+
+              <i
+                class="fa-solid fa-minus fa-flip-vertical"
+                style="color: #ffffff"
+              ></i>
+            </button>
+
+            <button type="button" class="maximize1">
+              <i class="fa-solid fa-window-maximize"></i>
+            </button>
+
+            <button type="button" class="close1">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+        </div>
+
+        <div class="this-pc-body">
+          <div class="section">
+            <h4>Folders</h4>
+            <div class="grid">
+              <div class="folder" id="documents">
+                <img
+                  height="10" width="10" src="https://img.icons8.com/fluency/48/folder-invoices.png"
+                  alt="Documents"
+                />
+                <p>Documents</p>
+              </div>
+              <div class="folder" id="pictures">
+                <img
+                  src="https://img.icons8.com/fluency/48/image-file.png"
+                  alt="Pictures"
+                />
+                <p>Pictures</p>
+              </div>
+              <div class="folder" id="videos" >
+                <img
+                  src="https://img.icons8.com/fluency/48/video-file.png"
+                  alt="Videos"
+                />
+                <p>Videos</p>
+              </div>
+              <div class="folder" id="music">
+                <img
+                  src="https://img.icons8.com/fluency/48/music.png"
+                  alt="Music"
+                />
+                <p>Music</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h4>Devices and Drives</h4>
+            <div class="grid">
+              <div class="drive">
+                <img
+                  src="https://img.icons8.com/fluency/48/hdd.png"
+                  alt="C Drive"
+                />
+                <div class="info">
+                  <p>Local Disk (C:)</p>
+                  <div class="bar">
+                    <div class="used" style="width: 65%"></div>
+                  </div>
+                  <small>65 GB free of 120 GB</small>
+                </div>
+              </div>
+
+              <div class="drive">
+                <img
+                  src="https://img.icons8.com/fluency/48/hdd.png"
+                  alt="D Drive"
+                />
+                <div class="info">
+                  <p>USB Drive (D:)</p>
+                  <div class="bar">
+                    <div class="used" style="width: 30%"></div>
+                  </div>
+                  <small>7 GB free of 32 GB</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="document-inner">
+          <div id="upper">
+            <button id="backward" ><</button>
+          <button id="forward" >></button>
+          <h1>Documents</h1>
+          </div>
+          <hr>
+          <div class="documents-body">
+            <div class="file">
+              <img src="https://img.icons8.com/fluency/48/microsoft-word-2019.png" alt="doc" />
+              <p>Resume.docx</p>
+            </div>
+            <div class="file">
+              <img src="https://img.icons8.com/fluency/48/pdf-2.png" alt="pdf" />
+              <p>Notes.pdf</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="pictures-inner">
+          <div id="pictures-upper">
+            <button id="backward">&#60;</button>
+            <button id="forward">&#62;</button>
+            <h1>Pictures</h1>
+          </div>
+          <hr>
+          <div class="pictures-body">
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1619441207978-3d326c46e2c9?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image1" />
+              <p>Vacation.png</p>
+            </div>
+            <div class="file">
+              <img src="https://plus.unsplash.com/premium_photo-1686963590730-cb427072d5db?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+            <div class="file">
+              <img src="https://plus.unsplash.com/premium_photo-1689885430775-ad2d484d41e3?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1571349588226-979f98cf76bf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+            <div class="file">
+              <img src="https://plus.unsplash.com/premium_photo-1661964146949-a35b9ae06f89?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1494783367193-149034c05e8f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1454486837617-ce8e1ba5ebfe?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1494783367193-149034c05e8f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+
+
+
+          </div>
+
+          
+          </div>
+
+
+
+          
+        <div id="music-inner">
+          <div id="music-upper">
+            <button id="backward">&#60;</button>
+            <button id="forward">&#62;</button>
+            <h1>Music</h1>
+          </div>
+          <hr />
+          <div class="music-body">
+            <div class="track">
+              <img src="https://img.icons8.com/color/48/music-library.png" alt="song" />
+              <p>Tum Hi Ho.mp3</p>
+            </div>
+            <div class="track">
+              <img src="https://img.icons8.com/color/48/music-library.png" alt="song" />
+              <p>Kesariya.mp3</p>
+            </div>
+            <div class="track">
+              <img src="https://img.icons8.com/color/48/music-library.png" alt="song" />
+              <p>Apna Bana Le.mp3</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="videos-inner">
+          <div id="videos-upper">
+            <button id="backward">&#60;</button>
+            <button id="forward">&#62;</button>
+            <h1>Videos</h1>
+          </div>
+          <hr />
+          <div class="videos-body">
+            <div class="clip">
+              <img src="https://img.icons8.com/fluency/48/video.png" alt="video1" />
+              <p>Pathaan-Trailer.mp4</p>
+            </div>
+            <div class="clip">
+              <img src="https://img.icons8.com/fluency/48/video.png" alt="video2" />
+              <p>Jawan-Song.mp4</p>
+            </div>
+            <div class="clip">
+              <img src="https://img.icons8.com/fluency/48/video.png" alt="video3" />
+              <p>KGF-2-Scene.mp4</p>
+            </div>
+          </div>
+        </div>
+        
+        
+
+
+
+        </div>
+
+
+
+        
+
+        <div id="images">
+
+          <div class="header">
+            <div class="heading">
+              <h5>Images</h5>
+            </div>
+  
+            <div class="buttons">
+              <button type="button" class="minimize2">
+                <!-- <i class="fa-solid fa-window-minimize"></i> -->
+                <i
+                  class="fa-solid fa-minus fa-flip-vertical"
+                  style="color: #ffffff"
+                ></i>
+              </button>
+  
+              <button type="button" class="maximize2">
+                <i class="fa-solid fa-window-maximize"></i>
+              </button>
+  
+              <button type="button" class="close2">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+          <hr>
+          <div class="pictures-body">
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1619441207978-3d326c46e2c9?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image1" />
+              <p>Vacation.png</p>
+            </div>
+            <div class="file">
+              <img src="https://plus.unsplash.com/premium_photo-1686963590730-cb427072d5db?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+            <div class="file">
+              <img src="https://plus.unsplash.com/premium_photo-1689885430775-ad2d484d41e3?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1571349588226-979f98cf76bf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+            <div class="file">
+              <img src="https://plus.unsplash.com/premium_photo-1661964146949-a35b9ae06f89?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1494783367193-149034c05e8f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1454486837617-ce8e1ba5ebfe?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+            <div class="file">
+              <img src="https://images.unsplash.com/photo-1494783367193-149034c05e8f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image2" />
+              <p>Profile.jpg</p>
+            </div>
+
+
+
+
+          </div>
+
+          
+          </div>
+
+
+          <div id="videosFolder">
+            <div class="header">
+              <div class="heading">
+                <h5>Videos</h5>
+              </div>
+    
+              <div class="buttons">
+                <button type="button" class="minimize3">
+                  <!-- <i class="fa-solid fa-window-minimize"></i> -->
+                  <i
+                    class="fa-solid fa-minus fa-flip-vertical"
+                    style="color: #ffffff"
+                  ></i>
+                </button>
+    
+                <button type="button" class="maximize3">
+                  <i class="fa-solid fa-window-maximize"></i>
+                </button>
+    
+                <button type="button" class="close3">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+            </div>
+           
+            <div class="videos-body">
+              <div class="clip">
+                <img src="https://img.icons8.com/fluency/48/video.png" alt="video1" />
+                <p>Pathaan-Trailer.mp4</p>
+              </div>
+              <div class="clip">
+                <img src="https://img.icons8.com/fluency/48/video.png" alt="video2" />
+                <p>Jawan-Song.mp4</p>
+              </div>
+              <div class="clip">
+                <img src="https://img.icons8.com/fluency/48/video.png" alt="video3" />
+                <p>KGF-2-Scene.mp4</p>
+              </div>
+            </div>
+          </div>
+
+
+
+
+      </div>
+
+
+
+
+
+
+    <!-- Taskbar -->
+    <section class="taskbar">
+      <!-- Left -->
+      <div class="left">
+        <h2>temp2</h2>
+      </div>
+
+      <!-- Center -->
+      <div class="center">
+        <div class="start">
+          <img
+            src="https://img.icons8.com/color/48/windows-11.png"
+            alt="Start Menu"
+            width="12"
+            height="12"
+          />
+        </div>
+        <div class="search">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/search--v1.png"
+            alt="Search"
+            width="12"
+            height="12"
+          />
+          <input type="search" placeholder="Search" id="searchbar" />
+        </div>
+        <div class="explorer">
+          <img
+            src="https://img.icons8.com/fluency/48/folder-invoices.png"
+            alt="Explorer"
+            width="12"
+            height="12"
+          />
+        </div>
+        <div class="browser">
+          <img
+            src="https://img.icons8.com/color/48/internet--v1.png"
+            alt="Browser"
+            width="12"
+            height="12"
+          />
+        </div>
+        <div class="setting">
+          <img
+            src="https://img.icons8.com/fluency/48/settings.png"
+            alt="Settings"
+            width="12"
+            height="12"
+          />
+        </div>
+        <div class="store">
+          <img
+            src="https://img.icons8.com/fluency/48/microsoft-store.png"
+            alt="Microsoft Store"
+            width="12"
+            height="12"
+          />
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="right">
+        <div class="wifi"><i class="fa-solid fa-wifi"></i></div>
+        <div class="volume"><i class="fa-solid fa-volume-high"></i></div>
+        <div class="battery">
+          <i class="fa-solid fa-battery-three-quarters"></i>
+        </div>
+        <div class="clock">
+          <span id="time">12:00 PM</span>
+          <span id="date">02-02-2222</span>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
